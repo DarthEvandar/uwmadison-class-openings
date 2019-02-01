@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/uwmadison-class-openings/static/js/runtime~main.e0a4a90b.js"
   },
   {
-    "revision": "31d78b61c3df74f2a9a7",
-    "url": "/uwmadison-class-openings/static/js/main.31d78b61.chunk.js"
+    "revision": "2bc03439882da1e851d8",
+    "url": "/uwmadison-class-openings/static/js/main.2bc03439.chunk.js"
   },
   {
     "revision": "f9bb55083e64d1837bb0",
     "url": "/uwmadison-class-openings/static/js/1.f9bb5508.chunk.js"
   },
   {
-    "revision": "31d78b61c3df74f2a9a7",
+    "revision": "2bc03439882da1e851d8",
     "url": "/uwmadison-class-openings/static/css/main.90af9964.chunk.css"
   },
   {
-    "revision": "70e48f4bb706d844c7925ef20f7e5278",
+    "revision": "8091157a889b37042422ccda134f0378",
     "url": "/uwmadison-class-openings/index.html"
   }
 ];
