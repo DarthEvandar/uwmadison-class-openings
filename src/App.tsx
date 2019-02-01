@@ -4675,6 +4675,9 @@ const styles = ({ palette, spacing, breakpoints }: Theme) => createStyles({
       marginRight: 'auto',
     },
   },
+  text: {
+    textAlign: 'center'
+  }
 });
 
 class App extends Component<any,any> {
@@ -4779,6 +4782,7 @@ class App extends Component<any,any> {
     const { classes } = this.props;
 
     return (
+      <div>
       <main className={classes.main}>
         <CssBaseline />
         <Paper className={classes.paper}>
@@ -4839,6 +4843,10 @@ class App extends Component<any,any> {
           </div>}
         </Paper>
       </main>
+      <p className={classes.text}>
+      Built by <a href="https://anderssundheim.me">Anders Sundheim</a>
+      </p>
+      </div>
     );
   }
 }
