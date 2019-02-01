@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.90af9964.chunk.css",
-  "main.js": "/static/js/main.e4b6947e.chunk.js",
-  "main.js.map": "/static/js/main.e4b6947e.chunk.js.map",
-  "static/js/1.f9bb5508.chunk.js": "/static/js/1.f9bb5508.chunk.js",
-  "static/js/1.f9bb5508.chunk.js.map": "/static/js/1.f9bb5508.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.90af9964.chunk.css.map": "/static/css/main.90af9964.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.e4c7fa9c00ff92034e388b810d3bb8ec.js": "/precache-manifest.e4c7fa9c00ff92034e388b810d3bb8ec.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/uwmadison-class-openings/static/css/main.90af9964.chunk.css",
+  "main.js": "/uwmadison-class-openings/static/js/main.0a1bd294.chunk.js",
+  "main.js.map": "/uwmadison-class-openings/static/js/main.0a1bd294.chunk.js.map",
+  "static/js/1.f9bb5508.chunk.js": "/uwmadison-class-openings/static/js/1.f9bb5508.chunk.js",
+  "static/js/1.f9bb5508.chunk.js.map": "/uwmadison-class-openings/static/js/1.f9bb5508.chunk.js.map",
+  "runtime~main.js": "/uwmadison-class-openings/static/js/runtime~main.e0a4a90b.js",
+  "runtime~main.js.map": "/uwmadison-class-openings/static/js/runtime~main.e0a4a90b.js.map",
+  "static/css/main.90af9964.chunk.css.map": "/uwmadison-class-openings/static/css/main.90af9964.chunk.css.map",
+  "index.html": "/uwmadison-class-openings/index.html",
+  "precache-manifest.60236d228c8349af6d2a9b4115f0c231.js": "/uwmadison-class-openings/precache-manifest.60236d228c8349af6d2a9b4115f0c231.js",
+  "service-worker.js": "/uwmadison-class-openings/service-worker.js"
 }
