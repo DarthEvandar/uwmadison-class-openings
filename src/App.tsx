@@ -4787,7 +4787,7 @@ class App extends Component<any,any> {
         <CssBaseline />
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
-            Select Class
+            Register for Updates
           </Typography>
           <Autosuggest
             inputProps={{
