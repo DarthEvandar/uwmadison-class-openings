@@ -4636,7 +4636,7 @@ const styles = ({ palette, spacing, breakpoints }: Theme) => createStyles({
   },
   container: {
     position: 'relative',
-    width: 500,
+    width: 400,
     marginTop: spacing.unit * 3
   },
   suggestionsContainerOpen: {
@@ -4670,7 +4670,7 @@ const styles = ({ palette, spacing, breakpoints }: Theme) => createStyles({
     marginLeft: spacing.unit * 3,
     marginRight: spacing.unit * 3,
     [breakpoints.up(400 + spacing.unit * 3 * 2)]: {
-      width: 600,
+      width: 500,
       marginLeft: 'auto',
       marginRight: 'auto',
     },
