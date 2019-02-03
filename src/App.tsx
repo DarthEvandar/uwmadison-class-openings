@@ -4852,13 +4852,13 @@ class App extends Component<any,any> {
                   class: selectedClass.school + ' ' + selectedClass.number,
                   email: this.state.email
                 }).then((response) => {
-                    console.log(response);
+                    console.log('Success: ' + response);
                     this.setState({
                       completed: true,
                       withError: false
                     });
-                }).then((error) => {
-                    console.log(error);
+                }).catch((error) => {
+                    console.log('Error: ' + error);
                     this.setState({
                       completed: true,
                       withError: true
