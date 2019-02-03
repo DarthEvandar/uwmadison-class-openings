@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/uwmadison-class-openings/precache-manifest.d7b27b8e4dd1d68f5a5f9d04b39b8d51.js"
+  "/uwmadison-class-openings/precache-manifest.c2b8b8edbbca543e74fe1572b31c008c.js"
 );
 
 workbox.clientsClaim();

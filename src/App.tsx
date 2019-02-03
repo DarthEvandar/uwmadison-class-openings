@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import DoneIcon from '@material-ui/icons/Done';
 import WarningIcon from '@material-ui/icons/Warning';
+import axios from 'axios';
 
 import { withStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Paper, InputAdornment, IconButton, Typography, CssBaseline, Button } from '@material-ui/core';
@@ -4687,9 +4688,11 @@ class App extends Component<any,any> {
 
     this.state = {
       value: '',
+      email: '',
       suggestions: [],
       validClass: false,
-      validEmail: false
+      validEmail: false,
+      completed: false
     }
   }
 
@@ -4769,7 +4772,10 @@ class App extends Component<any,any> {
   };
 
   onEmailChange = (event: any) => {
-    this.setState({ validEmail: event.target.value.includes('@') })
+    this.setState({ 
+      email: event.target.value,
+      validEmail: event.target.value.includes('@')
+    })
   }
 
   shouldRenderSuggestions = (value: string) => {
@@ -4785,7 +4791,7 @@ class App extends Component<any,any> {
       <div>
       <main className={classes.main}>
         <CssBaseline />
-        <Paper className={classes.paper}>
+        {!this.state.completed && <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
             Register for Updates
           </Typography>
@@ -4837,11 +4843,47 @@ class App extends Component<any,any> {
               fullWidth
               variant="contained"
               color="primary"
+              onClick={() => {
+                const selectedClass: IClass = data.filter(
+                    (val: IClass) => val.school + ' ' + val.number + ' ' + val.name === this.state.value
+                  )[0];
+                axios.post('http://138.68.48.39/register', {
+                  class: selectedClass.school + ' ' + selectedClass.number,
+                  email: this.state.email
+                }).then((response) => {
+                    console.log(response);
+                    this.setState({completed: true});
+                })
+              }}
             >
               Register For Updates
             </Button>
           </div>}
-        </Paper>
+        </Paper>}
+        {this.state.completed && <Paper className={classes.paper}>
+          <CssBaseline />
+          <Typography component="h1" variant="h5">
+            Success!
+          </Typography>
+          <br/>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              this.setState({
+                validClass: false,
+                validEmail: false,
+                value: '',
+                email: '',
+                suggestions: [],
+                completed: false
+              })
+            }} 
+            >
+            Restart
+            </Button>  
+        </Paper>}
       </main>
       <p className={classes.text}>
       Built by <a href="https://anderssundheim.me">Anders Sundheim</a>
