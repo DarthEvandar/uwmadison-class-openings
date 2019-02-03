@@ -4688,11 +4688,12 @@ class App extends Component<any,any> {
 
     this.state = {
       value: '',
-      email: '',
+      email: 'andersundheim@gmail.com',
       suggestions: [],
       validClass: false,
       validEmail: false,
-      completed: false
+      completed: true,
+      withError: false
     }
   }
 
@@ -4852,8 +4853,17 @@ class App extends Component<any,any> {
                   email: this.state.email
                 }).then((response) => {
                     console.log(response);
-                    this.setState({completed: true});
-                })
+                    this.setState({
+                      completed: true,
+                      withError: false
+                    });
+                }).then((error) => {
+                    console.log(error);
+                    this.setState({
+                      completed: true,
+                      withError: true
+                    });
+                });
               }}
             >
               Register For Updates
@@ -4862,9 +4872,31 @@ class App extends Component<any,any> {
         </Paper>}
         {this.state.completed && <Paper className={classes.paper}>
           <CssBaseline />
-          <Typography component="h1" variant="h5">
-            Success!
-          </Typography>
+          {this.state.withError ?
+          <div className={classes.text}>
+            <Typography component="h1" variant="h5">
+              Success!
+            </Typography>
+            <br/>
+            <Typography component="h1" variant="subtitle1" className={classes.text}>
+              You will receive an email at
+              <br/>
+              {this.state.email}
+              <br />
+              if a section opens for enrollment.
+            </Typography>
+          </div>
+          :
+          <div className={classes.text}>
+            <Typography component="h1" variant="h5">
+              Uh oh.
+            </Typography>
+            <br/>
+            <Typography component="h1" variant="subtitle1">
+              Something went wrong - please retry, and if that doesn't work please send an email describing the issue to andersundheim@gmail.com
+            </Typography>
+          </div>
+          }
           <br/>
           <Button
             type="submit"
