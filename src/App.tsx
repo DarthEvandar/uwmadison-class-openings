@@ -4688,11 +4688,11 @@ class App extends Component<any,any> {
 
     this.state = {
       value: '',
-      email: 'andersundheim@gmail.com',
+      email: '',
       suggestions: [],
       validClass: false,
       validEmail: false,
-      completed: true,
+      completed: false,
       withError: false
     }
   }
@@ -4872,7 +4872,7 @@ class App extends Component<any,any> {
         </Paper>}
         {this.state.completed && <Paper className={classes.paper}>
           <CssBaseline />
-          {this.state.withError ?
+          {!this.state.withError ?
           <div className={classes.text}>
             <Typography component="h1" variant="h5">
               Success!
