@@ -4775,7 +4775,7 @@ class App extends Component<any,any> {
   onEmailChange = (event: any) => {
     this.setState({ 
       email: event.target.value,
-      validEmail: event.target.value.includes('@')
+      validEmail: event.target.value.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi)
     })
   }
 
